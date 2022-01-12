@@ -1,0 +1,12 @@
+.modal-style{
+    display: block !important;
+    background-color: rgba(0,0,0,0.8)
+}
+
+.img-style{
+    width: 100%;
+    height: 300px
+}
+.title-style{
+    font-size: 14px
+}
