@@ -4,11 +4,11 @@ import { RootState } from '../../store/store';
 import {setSearchval, resetGiphyList, resetoffset} from "../../store/reducers/rootSlice"
 import getList from "../../shared/HOC"
 
-interface ISearchProps {
-  SearchKeyApi:(limit:number,offset:number) => void,
+type SearchProps = {
+  SearchKeyApi : (limit : number,offset : number) => void,
 };
 
-const Search: FC<ISearchProps> = ({SearchKeyApi}) => {
+const Search: FC<SearchProps> = ({SearchKeyApi}) => {
     const [searchKey, setSearchKey] = useState<string>("");
     const [submitFlag, setsubmitFlag] = useState<boolean>(false);
     const limit=20;

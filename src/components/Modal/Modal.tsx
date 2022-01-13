@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
 import './Style.css';
 
-interface IModalProps {
+type ModalProps = {
   show : boolean,
   setShowModal : (show: boolean) => void;
   selectedgif : any
 };
 
-const Modal: FC<IModalProps> = ({show, setShowModal, selectedgif}) => {
+const Modal: FC<ModalProps> = ({show, setShowModal, selectedgif}) => {
     return(  
-        <div>
+        <div data-testid="modal">
             {show ?
                 <div className="modal show fade modal-style">
                     <div className="modal-dialog">

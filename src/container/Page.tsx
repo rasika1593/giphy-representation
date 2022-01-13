@@ -3,11 +3,11 @@ import Header from '../components/Header/Header';
 import ThumbnailList from '../components/ThumbnailList/ThumbnailList';
 
 
-interface IPage {
+type Page = {
   
 };
 
-const Page: FC<IPage> = () => {
+const Page: FC<Page> = () => {
     return(  
        <>
         <Header/>

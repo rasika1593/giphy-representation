@@ -5,8 +5,8 @@ import { searchGiphy } from "../apiService/ApiService";
 import { RootState } from '../store/store';
 import { setGiphyimgList, setOffsetValue, setIsLoading, setIsFetching} from "../store/reducers/rootSlice"
 
-const getList = (WrappedComponent:FunctionComponent<any>) => {
-    const GetList = (props:any) => {
+const getList = (WrappedComponent : FunctionComponent<any>) => {
+    const GetList = (props : any) => {
         const dispatch = useDispatch();
         let searchval = useSelector((state:RootState) => state.root.searchVal);
 

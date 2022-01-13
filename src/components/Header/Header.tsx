@@ -2,11 +2,11 @@ import React, {FC} from 'react';
 import Search from '../Search/Search';
 
 
-interface IHeaderProps {
+type HeaderProps = {
   
 };
 
-const Header: FC<IHeaderProps> = () => {
+const Header: FC<HeaderProps> = () => {
     
     return(  
         <nav className="navbar navbar-expand-lg navbar-light bg-light">

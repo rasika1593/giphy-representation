@@ -1,27 +1,27 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
-export interface StoreStateType {
-    searchVal:string,
-    offsetValue:number,
-    giphyList:Array<any>,
-    isLoading:boolean,
-    isFetching:boolean,
+ type StoreStateType = {
+    searchVal: string,
+    offsetValue: number,
+    giphyList: Array<any>,
+    isLoading: boolean,
+    isFetching: boolean,
   }
 let initialState: StoreStateType= {
-    searchVal:"",
-    offsetValue:0,
-    giphyList:[],
-    isLoading:true,
-    isFetching:false
+    searchVal: "",
+    offsetValue: 0,
+    giphyList: [],
+    isLoading: true,
+    isFetching: false
 }
 export const rootSlice = createSlice({
     name: 'root',
     initialState,
-    reducers:{
+    reducers: {
         setSearchval: (state,action: PayloadAction<string>) => {
             state.searchVal = action.payload
         },
-        setIsLoading:(state, action: PayloadAction<boolean>) => {
+        setIsLoading: (state, action: PayloadAction<boolean>) => {
             state.isLoading = action.payload
         },
         setOffsetValue: (state) => {
@@ -37,7 +37,7 @@ export const rootSlice = createSlice({
         resetoffset: (state)=>{
             state.offsetValue = 0
         },
-        setIsFetching:(state, action: PayloadAction<boolean>) => {
+        setIsFetching: (state, action: PayloadAction<boolean>) => {
             state.isFetching = action.payload
         },
     }

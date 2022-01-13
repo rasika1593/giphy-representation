@@ -6,11 +6,11 @@ import { getGiphyList } from "../../apiService/ApiService";
 import Modal from '../Modal/Modal';
 import getList from "../../shared/HOC";
 
-interface IProps {
-    SearchKeyApi:any
+type ThumbnailProps = {
+    SearchKeyApi : any
 };
 
-const ThumbnailList: FC<IProps> = ({SearchKeyApi}) => {
+const ThumbnailList: FC<ThumbnailProps> = ({SearchKeyApi}) => {
 
     const [offset, setOffset] = useState<number>(0);
     const [showModal, setShowModal] = useState<boolean>(false);
