@@ -7,7 +7,7 @@ import Modal from '../Modal/Modal';
 import getList from "../../shared/HOC";
 
 type ThumbnailProps = {
-    SearchKeyApi : any
+    SearchKeyApi : (limit : number,offset : number) => void,
 };
 
 const ThumbnailList: FC<ThumbnailProps> = ({SearchKeyApi}) => {
